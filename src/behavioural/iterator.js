@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * PAI presentation
  * ULL 2020-2021
@@ -15,7 +16,7 @@
 class Container {
   /**
    * Constructor
-   * @param {...member} member Something to be stored
+   * @param {...*} members Something to be stored
    */
   constructor(...members) {
     this.members_ = [];
@@ -39,7 +40,7 @@ class Container {
 class AnotherContainer {
   /**
    * Constructor
-   * @param {...member} member Something to be stored
+   * @param {...*} members Something to be stored
    */
   constructor(...members) {
     this.members_ = '';
@@ -61,7 +62,7 @@ class AnotherContainer {
 /**
  * Entry point for the program
  */
-const main = () => {
+const exampleIterator = () => {
   const container = new Container(1, 2, 3, 4, 5);
   console.log('Array container: ');
   for (const element of container) {
@@ -74,4 +75,4 @@ const main = () => {
   }
 };
 
-main();
+exampleIterator();

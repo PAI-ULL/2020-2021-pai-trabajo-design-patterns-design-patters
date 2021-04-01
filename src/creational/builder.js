@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * PAI presentation
  * ULL 2020-2021
@@ -65,10 +66,10 @@ class DataFrameCSVBuilder extends DataFrameBuilder {
 /**
  * Entry point for the program
  */
-const main = () => {
+const exampleBuilder = () => {
   const resource = new DataFrameCSVBuilder('file1.csv');
   const dataFrame = resource.build();
   console.log(dataFrame);
 };
 
-main();
+exampleBuilder();

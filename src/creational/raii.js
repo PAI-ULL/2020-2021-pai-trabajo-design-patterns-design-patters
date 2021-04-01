@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * PAI presentation
  * ULL 2020-2021
@@ -42,7 +43,7 @@ class FileResource {
 /**
  * Entry point for the program
  */
-const main = () => {
+const exampleRAII = () => {
   const resource = new FileResource('file1');
   try {
     resource.write('Thing to write');
@@ -53,4 +54,4 @@ const main = () => {
   }
 };
 
-main();
+exampleRAII();

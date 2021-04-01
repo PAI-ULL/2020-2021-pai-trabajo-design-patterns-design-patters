@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * PAI presentation
  * ULL 2020-2021
@@ -61,7 +62,7 @@ class Observer {
 /**
  * Entry point for the program
  */
-const main = () => {
+const exampleObserver = () => {
   const subject = new Subject();
   subject.addObserver(new Observer(() => {
     console.log('Hello from observer1');
@@ -72,4 +73,4 @@ const main = () => {
   subject.notify();
 };
 
-main();
+exampleObserver();
