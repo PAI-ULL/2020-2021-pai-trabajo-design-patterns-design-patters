@@ -1,0 +1,22 @@
+{
+  "name": "2020-2021-pai-trabajo-design-patterns-design-patters",
+  "version": "1.0.0",
+  "description": "A presentation about design patterns",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PAI-ULL/2020-2021-pai-trabajo-design-patterns-design-patters.git"
+  },
+  "author": "Daniel del Castillo and Francisco Mendes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PAI-ULL/2020-2021-pai-trabajo-design-patterns-design-patters/issues"
+  },
+  "homepage": "https://github.com/PAI-ULL/2020-2021-pai-trabajo-design-patterns-design-patters#readme",
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
