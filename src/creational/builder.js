@@ -14,12 +14,14 @@
  * Complex class
  */
 class DataFrame {
+  /** @const {*} @private */
+  #data;
   /**
    * Simple constructor
    * @param {array} data The data
    */
   constructor(data) {
-    this.data_ = data;
+    this.#data = data;
   }
 }
 
@@ -30,7 +32,7 @@ class DataFrameBuilder {
   /**
    * Constructor
    */
-  constructor() {}
+  constructor() { }
   /**
    * Build a dataFrame
    * @return {DataFrame} A data frame

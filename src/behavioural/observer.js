@@ -14,25 +14,26 @@
  * Subject class
  */
 class Subject {
+  /** @const {array} @private */
+  #observers;
   /**
    * Constructor
    */
   constructor() {
-    /** @const {array} @private */
-    this.observers_ = [];
+    this.#observers = [];
   }
   /**
    * Add an observer
    * @param {Observer} observer The observer
    */
   addObserver(observer) {
-    this.observers_.push(observer);
+    this.#observers.push(observer);
   }
   /**
    * Notify the all the observers
    */
   notify() {
-    this.observers_.map((observer) => {
+    this.#observers.map((observer) => {
       observer.notify();
     });
   }
@@ -42,19 +43,20 @@ class Subject {
  * Observer class
  */
 class Observer {
+  /** @const {function} @private */
+  #action;
   /**
    * Constructor
    * @param {function} action The action to perform when notified
    */
   constructor(action) {
-    /** @const {function} @private */
-    this.action_ = action;
+    this.#action = action;
   }
   /**
    * Notify the observer and perform its action
    */
   notify() {
-    this.action_();
+    this.#action();
   }
 }
 

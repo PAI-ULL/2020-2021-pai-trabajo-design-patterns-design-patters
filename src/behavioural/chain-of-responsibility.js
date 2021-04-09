@@ -19,19 +19,20 @@ const REQUEST_TYPE = {
  * Sender class
  */
 class Sender {
+  /** @const {array} @private */
+  #receivers;
   /**
    * Constructor
    */
   constructor() {
-    /** @const {array} @private */
-    this.receivers_ = [];
+    this.#receivers = [];
   }
   /**
    * Add a receiver
    * @param {Receiver} receiver The receiver
    */
   addReceiver(receiver) {
-    this.receivers_.push(receiver);
+    this.#receivers.push(receiver);
   }
   /**
    * Send the request to the receivers
@@ -39,7 +40,7 @@ class Sender {
     * @param {string} requestData The data of the request
    */
   sendRequest(requestType, requestData) {
-    for (const receiver of this.receivers_) {
+    for (const receiver of this.#receivers) {
       if (receiver.canHandle(requestType)) {
         receiver.handleRequest(requestData);
         return;

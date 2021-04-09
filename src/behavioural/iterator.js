@@ -14,21 +14,23 @@
  * Container class
  */
 class Container {
+  /** @const {Array} @private */
+  #members;
   /**
    * Constructor
    * @param {...*} members Something to be stored
    */
   constructor(...members) {
-    this.members_ = [];
+    this.#members = [];
     for (const element of members) {
-      this.members_.push(element);
+      this.#members.push(element);
     }
   }
   /**
    * Iterator implementation
    */
-  * [Symbol.iterator]() {
-    for (const element of this.members_) {
+  *[Symbol.iterator]() {
+    for (const element of this.#members) {
       yield element;
     }
   }
@@ -38,22 +40,24 @@ class Container {
  * Container class
  */
 class AnotherContainer {
+  /** @const {Array} @private */
+  #members;
   /**
    * Constructor
    * @param {...*} members Something to be stored
    */
   constructor(...members) {
-    this.members_ = '';
+    this.#members = '';
     for (const element of members) {
-      this.members_ += JSON.stringify(element) + ',';
+      this.#members += JSON.stringify(element) + ',';
     }
-    this.members_ = this.members_.slice(0, -1);
+    this.#members = this.#members.slice(0, -1);
   }
   /**
    * Iterator implementation
    */
-  * [Symbol.iterator]() {
-    for (const element of this.members_.split(',')) {
+  *[Symbol.iterator]() {
+    for (const element of this.#members.split(',')) {
       yield JSON.parse(element);
     }
   }
