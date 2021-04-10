@@ -31,7 +31,6 @@ class Hamburger {
   }
 
   /**
-   * @method getPrice
    * Price getter
    * @return {number} 
    */
@@ -40,7 +39,6 @@ class Hamburger {
   }
 
   /**
-   * @method getDescription
    * Description getter
    * @return {string}
    */
@@ -49,7 +47,6 @@ class Hamburger {
   }
 
   /**
-   * @method getHambuger
    * Get a description of the hamburger with its price.
    * @return {string}
    */

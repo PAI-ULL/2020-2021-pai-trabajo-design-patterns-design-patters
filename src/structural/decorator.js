@@ -28,7 +28,6 @@ class Hamburger {
   }
 
   /**
-   * @method getPrice
    * Price getter
    * @return {number} 
    */
@@ -37,7 +36,6 @@ class Hamburger {
   }
 
   /**
-   * @method getDescription
    * Description getter
    * @return {string}
    */
@@ -46,7 +44,6 @@ class Hamburger {
   }
 
   /**
-   * @method getHambuger
    * Get a description of the hamburger with its price.
    * @return {string}
    */
@@ -122,6 +119,9 @@ class HamburgerDecorator extends Hamburger {
   }
 }
 
+/**
+ * BaconDecorator Class
+ */
 class BaconDecorator extends HamburgerDecorator {
   /**
    * Create an object BaconDecorator
@@ -132,7 +132,6 @@ class BaconDecorator extends HamburgerDecorator {
   }
 
   /**
-   * @method getDescription
    * Description getter
    * @return {string}
    */
@@ -141,7 +140,6 @@ class BaconDecorator extends HamburgerDecorator {
   }
 
   /**
-   * @method getPrice
    * Price getter
    * @return {number} 
    */
@@ -150,6 +148,9 @@ class BaconDecorator extends HamburgerDecorator {
   }
 }
 
+/**
+ * HamburgerDecorator Class
+ */
 class HamDecorator extends HamburgerDecorator {
   /**
    * Create an object HamDecorator
@@ -160,7 +161,6 @@ class HamDecorator extends HamburgerDecorator {
   }
 
   /**
-   * @method getDescription
    * Description getter
    * @return {string}
    */
@@ -169,7 +169,6 @@ class HamDecorator extends HamburgerDecorator {
   }
 
   /**
-   * @method getPrice
    * Price getter
    * @return {number} 
    */
@@ -178,6 +177,9 @@ class HamDecorator extends HamburgerDecorator {
   }
 }
 
+/**
+ * MeatDecorator Class
+ */
 class MeatDecorator extends HamburgerDecorator {
   /**
    * Create an object MeatDecorator
@@ -188,7 +190,6 @@ class MeatDecorator extends HamburgerDecorator {
   }
 
   /**
-   * @method getDescription
    * Description getter
    * @return {string}
    */
@@ -197,7 +198,6 @@ class MeatDecorator extends HamburgerDecorator {
   }
 
   /**
-   * @method getPrice
    * Price getter
    * @return {number} 
    */
@@ -206,7 +206,9 @@ class MeatDecorator extends HamburgerDecorator {
   }
 }
 
-
+/**
+ * PickleDecorator Class
+ */
 class PickleDecorator extends HamburgerDecorator {
   /**
    * Create an object PickleDecorator
@@ -217,7 +219,6 @@ class PickleDecorator extends HamburgerDecorator {
   }
 
   /**
-   * @method getDescription
    * Description getter
    * @return {string}
    */
@@ -226,7 +227,6 @@ class PickleDecorator extends HamburgerDecorator {
   }
 
   /**
-   * @method getPrice
    * Price getter
    * @return {number} 
    */
@@ -235,13 +235,20 @@ class PickleDecorator extends HamburgerDecorator {
   }
 }
 
-let cheeseBurger = new CheeseBurger();
-let cheeseBurgerWithHam = new HamDecorator(cheeseBurger);
-let cheeseBurgerWithHamAndBacon = new BaconDecorator(cheeseBurgerWithHam);
+/**
+ * Entry point for the program
+ */
+const exampleDecorator = function() {
+  let cheeseBurger = new CheeseBurger();
+  let cheeseBurgerWithHam = new HamDecorator(cheeseBurger);
+  let cheeseBurgerWithHamAndBacon = new BaconDecorator(cheeseBurgerWithHam);
 
-console.log(cheeseBurger.getHamburger());
-//output You order is: Cheeseburger and the price 100
-console.log(cheeseBurgerWithHam.getHamburger());
-//output You order is: Cheeseburger with ham and the price 115
-console.log(cheeseBurgerWithHamAndBacon.getHamburger());
-//output You order is: Cheeseburger with ham with bacon and the price 124
+  console.log(cheeseBurger.getHamburger());
+  //output You order is: Cheeseburger and the price 100
+  console.log(cheeseBurgerWithHam.getHamburger());
+  //output You order is: Cheeseburger with ham and the price 115
+  console.log(cheeseBurgerWithHamAndBacon.getHamburger());
+  //output You order is: Cheeseburger with ham with bacon and the price 124
+};
+
+exampleDecorator();
