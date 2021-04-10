@@ -15,41 +15,43 @@
  */
 // @ts-ignore
 class Hamburger {
+  /** @protected {string}*/
+  _description = '';
+  /** @protected {number} */
+  _price = 0;
   /**
-   * constructor
+   * Create an object hamburger
    */
   constructor() {
-    this._description = "Unknown Hamburger";
+    this._description = 'Unknown Hamburger';
     this._price = 0;
-  }
-  /**
-   * Price setter
-   */
-  set price(price) {
-    this._price = price;
   }
 
   /**
+   * @method getPrice
    * Price getter
+   * @return {number} 
    */
-  get price() {
+  getPrice() {
     return this._price;
   }
 
   /**
+   * @method getDescription
    * Description getter
+   * @return {string}
    */
-  get description() {
+  getDescription() {
     return this._description;
   }
 
   /**
-   * @function getHambuger
-   * Get a descrption of the hamburger with its price.
+   * @method getHambuger
+   * Get a description of the hamburger with its price.
    * @return {string}
    */
   getHamburger() {
-    return `You order is: ${this.description} and the price ${this.price}`;
+    return `You order is: ${this.getDescription()} and the price ${this.getPrice()}`;
   }
 }
 
@@ -59,12 +61,14 @@ class Hamburger {
 // @ts-ignore
 class CheeseBurger extends Hamburger {
   /**
-   * constructor
+   * Create an object Cheeseburger
    */
   constructor(){
     super();
-    this.description = 'Cheeseburger';
-    this.price = 100;
+    /** @protected {string}*/
+    this._description = 'Cheeseburger';
+    /** @protected {number} */
+    this._price = 100;
   }
 }
 
@@ -74,13 +78,15 @@ class CheeseBurger extends Hamburger {
  */
 // @ts-ignore
 class BaconDoubleBurger extends Hamburger {
-   /**
-   * constructor
+  /**
+   * Create an object BaconDoubleBurger
    */
   constructor() {
     super();
-    this.description = "Bacon Double Burger";
-    this.price = 110;
+    /** @protected {string}*/
+    this._description = 'Bacon Double Burger';
+    /** @protected {number} */
+    this._price = 110;
   }
 }
 
@@ -89,13 +95,15 @@ class BaconDoubleBurger extends Hamburger {
  */
 // @ts-ignore
 class WesternBurger extends Hamburger {
-   /**
-   * constructor
+  /**
+   * Create an object WesternBurger
    */
   constructor(){
     super();
-    this.description = 'Western Burger';
-    this.price = 105;
+    /** @protected {string}*/
+    this._description = 'Western Burger';
+    /** @protected {number} */
+    this._price = 105;
   }
 }
 
@@ -103,19 +111,20 @@ class WesternBurger extends Hamburger {
  * HamburgerDecorator Class
  */
 class HamburgerDecorator extends Hamburger {
-   /**
-   * constructor
+  /**
+   * Create an object HamburgerDecorator
    * @param {Hamburger} burger
    */
   constructor(burger) {
     super();
-    this.burger = burger;
+    /**@protected {Hamburger} */
+    this._burger = burger;
   }
 }
 
 class BaconDecorator extends HamburgerDecorator {
-   /**
-   * constructor
+  /**
+   * Create an object BaconDecorator
    * @param {Hamburger} burger
    */
   constructor(burger) {
@@ -123,23 +132,27 @@ class BaconDecorator extends HamburgerDecorator {
   }
 
   /**
+   * @method getDescription
    * Description getter
+   * @return {string}
    */
-  get description() {
-    return this.burger.description + " with bacon";
+  getDescription() {
+    return this._burger.getDescription() + ' with bacon';
   }
 
   /**
+   * @method getPrice
    * Price getter
+   * @return {number} 
    */
-  get price() {
-    return this.burger.price + 9;
+  getPrice() {
+    return this._burger.getPrice() + 9;
   }
 }
 
 class HamDecorator extends HamburgerDecorator {
   /**
-   * constructor
+   * Create an object HamDecorator
    * @param {Hamburger} burger
    */
   constructor(burger) {
@@ -147,23 +160,27 @@ class HamDecorator extends HamburgerDecorator {
   }
 
   /**
+   * @method getDescription
    * Description getter
+   * @return {string}
    */
-  get description() {
-    return this.burger.description + " with ham";
+  getDescription() {
+    return this._burger.getDescription() + ' with ham';
   }
 
   /**
+   * @method getPrice
    * Price getter
+   * @return {number} 
    */
-  get price() {
-    return this.burger.price + 15;
+  getPrice() {
+    return this._burger.getPrice() + 15;
   }
 }
 
 class MeatDecorator extends HamburgerDecorator {
-   /**
-   * constructor
+  /**
+   * Create an object MeatDecorator
    * @param {Hamburger} burger
    */
   constructor(burger) {
@@ -171,24 +188,28 @@ class MeatDecorator extends HamburgerDecorator {
   }
 
   /**
+   * @method getDescription
    * Description getter
+   * @return {string}
    */
-  get description() {
-    return this.burger.description + " with meat";
+  getDescription() {
+    return this._burger.getDescription() + ' with meat';
   }
 
   /**
+   * @method getPrice
    * Price getter
+   * @return {number} 
    */
-  get price() {
-    return this.burger.price + 20;
+  getPrice() {
+    return this._burger.getPrice() + 20;
   }
 }
 
 
 class PickleDecorator extends HamburgerDecorator {
-   /**
-   * constructor
+  /**
+   * Create an object PickleDecorator
    * @param {Hamburger} burger
    */
   constructor(burger) {
@@ -196,21 +217,23 @@ class PickleDecorator extends HamburgerDecorator {
   }
 
   /**
+   * @method getDescription
    * Description getter
+   * @return {string}
    */
-  get description() {
-    return this.burger.description + " with pickle";
+  getDescription() {
+    return this._burger.getDescription() + ' with pickle';
   }
 
   /**
+   * @method getPrice
    * Price getter
+   * @return {number} 
    */
-  get price() {
-    return this.burger.price + 5;
+  getPrice() {
+    return this._burger.getPrice() + 5;
   }
 }
-
-
 
 let cheeseBurger = new CheeseBurger();
 let cheeseBurgerWithHam = new HamDecorator(cheeseBurger);

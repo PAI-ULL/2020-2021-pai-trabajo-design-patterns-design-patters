@@ -11,105 +11,145 @@
  'use strict';
 
  /**
-  * Base class
-  */
- class Hamburger {
-   /**
-    * constructor
-    */
-   constructor() {
-     this._description = "Unknown Hamburger";
-     this._price = 0;
-     //Add Atribute for each new extra ingredient
-   }
-   /**
-    * Price setter
-    */
-   set price(price) {
-     this._price = price;
-   }
- 
-   /**
-    * Price getter
-    */
-   get price() {
-     return this._price;
-   }
- 
-   /**
-    * Description getter
-    */
-   get description() {
-     return this._description;
-   }
- 
-   /**
-    * @function getHambuger
-    * Get a descrption of the hamburger with its price.
-    * @return {string}
-    */
-   getHamburger() {
-     return `You order is: ${this.description} and the price ${this.price}`;
-   }
+ * Base class
+ */
+class Hamburger {
+  /** @protected {string}*/
+  _description = '';
+  /** @protected {number} */
+  _price = 0;
+  /**
+   * Add an atribute for each extra ingredient.
+   */
+  
+  /**
+   * Create an object hamburger
+   */
+  constructor() {
+    this._description = 'Unknown Hamburger';
+    this._price = 0;
+  }
 
+  /**
+   * @method getPrice
+   * Price getter
+   * @return {number} 
+   */
+  getPrice() {
+    return this._price;
+  }
+
+  /**
+   * @method getDescription
+   * Description getter
+   * @return {string}
+   */
+  getDescription() {
+    return this._description;
+  }
+
+  /**
+   * @method getHambuger
+   * Get a description of the hamburger with its price.
+   * @return {string}
+   */
+  getHamburger() {
+    return `You order is: ${this.getDescription()} and the price ${this.getPrice()}`;
+  }
    /**
     * Add more methods if you want to add a new functionality for example new 
-    * extra igredient
+    * extra ingredient
     */
- }
- 
- /**
-  * CheeseBurger Class
-  */
- class CheeseBurger extends Hamburger {
-   /**
-    * constructor
-    */
-   constructor(){
-     super();
-     this.description = 'Cheeseburger';
-     this.price = 100;
-     //Add Atribute for each new extra ingredient
-   }
- }
- 
- 
- /**
-  * BaconDoubleBurger Class
-  */
- class BaconDoubleBurger extends Hamburger {
-    /**
-    * constructor
-    */
-   constructor() {
-     super();
-     this.description = "Bacon Double Burger";
-     this.price = 110;
-     //Add Atribute for each new extra ingredient
-   }
- }
- 
- /**
-  * WesternBurger Class
-  */
- class WesternBurger extends Hamburger {
-    /**
-    * constructor
-    */
-   constructor(){
-     super();
-     this.description = 'Western Burger';
-     this.price = 105;
-     //Add Atribute for each new extra ingredient
-   }
- }
+}
 
- /*class AnotherBurgerWithExtra extends Hamburger {
- constructor(){
-   super();
-   this.description = 'Another Burger';
-   this.price = newPrice;
-   //Add Atribute for each new extra ingredient
- }
+/**
+ * CheeseBurger Class
+ */
+class CheeseBurger extends Hamburger {
+  /**
+   * Create an object Cheeseburger
+   */
+  constructor(){
+    super();
+    /** @protected {string}*/
+    this._description = 'Cheeseburger';
+    /** @protected {number} */
+    this._price = 100;
+    /**
+     * Add an atribute for each extra ingredient.
+     */
+  }
+  /**
+   * Add more methods if you want to add a new functionality for example new 
+   * extra ingredient
+   */
+}
+
+
+/**
+ * BaconDoubleBurger Class
+ */
+class BaconDoubleBurger extends Hamburger {
+ /**
+  * Create an object BaconDoubleBurger
+  */
+  constructor() {
+    super();
+    /** @protected {string}*/
+    this._description = 'Bacon Double Burger';
+    /** @protected {number} */
+    this._price = 110;
+    /**
+     * Add an atribute for each extra ingredient.
+     */
+  }
+  /**
+   * Add more methods if you want to add a new functionality for example new 
+   * extra ingredient
+   */
+}
+
+/**
+ * WesternBurger Class
+ */
+class WesternBurger extends Hamburger {
+ /**
+  * Create an object WesternBurger
+  */
+  constructor(){
+    super();
+    /** @protected {string}*/
+    this._description = 'Western Burger';
+    /** @protected {number} */
+    this._price = 105;
+    /**
+     * Add an atribute for each extra ingredient.
+     */
+  }
+  /**
+   * Add more methods if you want to add a new functionality for example new 
+   * extra ingredient
+   */
+}
+
+
+/* class AnotherBurgerWithExtra extends Hamburger {
+ /**
+  * Create an object WesternBurger
+  *
+  constructor(){
+    super();
+    /** @protected {string}*
+    this.description = 'Another Burger';
+    /** @protected {number} *
+    this.price = newPrice;
+    /**
+     * Add an atribute for each extra ingredient.
+     *
+  }
+  /**
+   * Add more methods if you want to add a new functionality for example new 
+   * extra ingredient
+   *
 }*/
  
