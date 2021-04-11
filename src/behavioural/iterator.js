@@ -21,10 +21,7 @@ class Container {
    * @param {...*} members Something to be stored
    */
   constructor(...members) {
-    this.#members = [];
-    for (const element of members) {
-      this.#members.push(element);
-    }
+    this.#members = members;
   }
   /**
    * Iterator implementation

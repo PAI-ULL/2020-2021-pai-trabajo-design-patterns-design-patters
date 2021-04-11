@@ -178,64 +178,6 @@ class HamDecorator extends HamburgerDecorator {
 }
 
 /**
- * MeatDecorator Class
- */
-class MeatDecorator extends HamburgerDecorator {
-  /**
-   * Create an object MeatDecorator
-   * @param {Hamburger} burger
-   */
-  constructor(burger) {
-    super(burger);
-  }
-
-  /**
-   * Description getter
-   * @return {string}
-   */
-  getDescription() {
-    return this._burger.getDescription() + ' with meat';
-  }
-
-  /**
-   * Price getter
-   * @return {number} 
-   */
-  getPrice() {
-    return this._burger.getPrice() + 20;
-  }
-}
-
-/**
- * PickleDecorator Class
- */
-class PickleDecorator extends HamburgerDecorator {
-  /**
-   * Create an object PickleDecorator
-   * @param {Hamburger} burger
-   */
-  constructor(burger) {
-    super(burger);
-  }
-
-  /**
-   * Description getter
-   * @return {string}
-   */
-  getDescription() {
-    return this._burger.getDescription() + ' with pickle';
-  }
-
-  /**
-   * Price getter
-   * @return {number} 
-   */
-  getPrice() {
-    return this._burger.getPrice() + 5;
-  }
-}
-
-/**
  * Entry point for the program
  */
 const exampleDecorator = function() {
