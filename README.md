@@ -11,7 +11,7 @@ This repository is organised as follows:
 
       .
       ├── bib                             # Assignment bibliography
-      ├── slides                          # [slides of the presentation](https://docs.google.com/presentation/d/1V6M1SFRgg5bsB7p0-zQC9DXmw3z-VfWpCQvj3z0tsSE/edit?usp=sharing)
+      ├── slides                          # slides of the presentation
       ├── src                             # Source code 
             ├── behavioural               # behavioural patterns examples
                   ├── chain-of-responsibility.js   
@@ -23,3 +23,5 @@ This repository is organised as follows:
             ├── structural                # structural patterns examples
                   ├── decorator.js
                   ├── hamburger-wrong.js
+                 
+The slides can also be found [here](https://docs.google.com/presentation/d/1V6M1SFRgg5bsB7p0-zQC9DXmw3z-VfWpCQvj3z0tsSE/edit?usp=sharing)
