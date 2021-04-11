@@ -11,7 +11,7 @@ This repository is organised as follows:
 
       .
       ├── bib                             # Assignment bibliography
-      ├── slides                          # slides of your presentation
+      ├── slides                          # [slides of the presentation](https://docs.google.com/presentation/d/1V6M1SFRgg5bsB7p0-zQC9DXmw3z-VfWpCQvj3z0tsSE/edit?usp=sharing)
       ├── src                             # Source code 
             ├── behavioural               # behavioural patterns examples
                   ├── chain-of-responsibility.js   
