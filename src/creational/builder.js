@@ -2,7 +2,9 @@
 /**
  * PAI presentation
  * ULL 2020-2021
- * @file An example of the Builder design pattern
+ * @file An example of the Builder design pattern. 
+ *    The builder pattern is based on separating the construction code and 
+ *    logic of a complex object from its representation. 
  * @since 1/04/2021
  * @author Daniel del Castillo de la Rosa
  * @author Francisco Jesús Mendes Gómez

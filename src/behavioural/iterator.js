@@ -2,7 +2,9 @@
 /**
  * PAI presentation
  * ULL 2020-2021
- * @file An example of the Iterator design pattern
+ * @file An example of the Iterator design pattern.
+ *    The iterator patterns allows us to iterate over the elements of a 
+ *    container independent of the container's type.
  * @since 1/04/2021
  * @author Daniel del Castillo de la Rosa
  * @author Francisco Jesús Mendes Gómez

@@ -2,7 +2,7 @@
 /**
  * PAI presentation
  * ULL 2020-2021
- * @file An example of bad desing.
+ * @file This represents a case where decorator pattern could be usefull.
  * @since 5/04/2021
  * @author Daniel del Castillo de la Rosa
  * @author Francisco Jesús Mendes Gómez
@@ -14,10 +14,10 @@
  * Base class
  */
 class Hamburger {
-  /** @protected {string}*/
-  _description = '';
-  /** @protected {number} */
-  _price = 0;
+  /** @const {string} @protected */
+  description_ = '';
+  /** @const {number} @protected */
+  price_ = 0;
   /**
    * Add an atribute for each extra ingredient.
    */
@@ -26,8 +26,8 @@ class Hamburger {
    * Create an object hamburger
    */
   constructor() {
-    this._description = 'Unknown Hamburger';
-    this._price = 0;
+    this.description_ = 'Unknown Hamburger';
+    this.price_ = 0;
   }
 
   /**
@@ -35,7 +35,7 @@ class Hamburger {
    * @return {number} 
    */
   getPrice() {
-    return this._price;
+    return this.price_;
   }
 
   /**
@@ -43,7 +43,7 @@ class Hamburger {
    * @return {string}
    */
   getDescription() {
-    return this._description;
+    return this.description_;
   }
 
   /**
@@ -68,10 +68,10 @@ class CheeseBurger extends Hamburger {
    */
   constructor(){
     super();
-    /** @protected {string}*/
-    this._description = 'Cheeseburger';
-    /** @protected {number} */
-    this._price = 100;
+    /** @const {string} @protected */
+    this.description_ = 'Cheeseburger';
+    /** @const {number} @protected */
+    this.price_ = 100;
     /**
      * Add an atribute for each extra ingredient.
      */
@@ -92,10 +92,10 @@ class BaconDoubleBurger extends Hamburger {
   */
   constructor() {
     super();
-    /** @protected {string}*/
-    this._description = 'Bacon Double Burger';
-    /** @protected {number} */
-    this._price = 110;
+    /** @const {string} @protected */
+    this.description_ = 'Bacon Double Burger';
+    /** @const {number} @protected */
+    this.price_ = 110;
     /**
      * Add an atribute for each extra ingredient.
      */
@@ -115,10 +115,10 @@ class WesternBurger extends Hamburger {
   */
   constructor(){
     super();
-    /** @protected {string}*/
-    this._description = 'Western Burger';
-    /** @protected {number} */
-    this._price = 105;
+    /** @const {string} @protected */
+    this.description_ = 'Western Burger';
+    /** @const {number} @protected */
+    this.price_ = 105;
     /**
      * Add an atribute for each extra ingredient.
      */
