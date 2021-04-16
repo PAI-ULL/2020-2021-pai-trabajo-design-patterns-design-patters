@@ -24,6 +24,7 @@ class DataFrame {
    */
   constructor(data) {
     this.#data = data;
+    console.log(data);
   }
 }
 
@@ -74,7 +75,6 @@ class DataFrameCSVBuilder extends DataFrameBuilder {
 const exampleBuilder = () => {
   const resource = new DataFrameCSVBuilder('file1.csv');
   const dataFrame = resource.build();
-  console.log(dataFrame);
 };
 
 exampleBuilder();

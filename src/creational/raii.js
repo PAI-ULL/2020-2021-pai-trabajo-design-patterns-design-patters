@@ -3,6 +3,10 @@
  * PAI presentation
  * ULL 2020-2021
  * @file An example of the RAII design pattern
+ *     This pattern is based on the use of constructors and 
+  *     destructors and tries to ensure all resources are properly
+  *     allocated and freed. It is of capital importance in some low
+  *     level programming languages like C++.
  * @since 31/03/2021
  * @author Daniel del Castillo de la Rosa
  * @author Francisco Jesús Mendes Gómez
