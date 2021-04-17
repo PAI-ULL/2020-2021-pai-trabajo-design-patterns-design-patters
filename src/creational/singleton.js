@@ -2,7 +2,7 @@
 /**
  * PAI presentation
  * ULL 2020-2021
- * @file An example of the singleton design pattern. 
+ * @file An example of the singleton design pattern.
  *    The singleton pattern is is useful when we need to
  *    ensure that only one instance of a class is created
  * @since 16/04/2021
@@ -17,15 +17,17 @@
  */
 class Singleton {
   /** @const {*} @private */
-  static instance_;
+  // @ts-ignore
+  static #instance;
   /**
    * Singleton "constructor"
+   * @return {Object} The instance of the class
    */
   static getInstance() {
-    if (this.instance_ === undefined) {
-      this.instance_ = {};
+    if (Singleton.#instance === undefined) {
+      Singleton.#instance = {};
     }
-    return this.instance_;
+    return Singleton.#instance;
   }
 }
 
