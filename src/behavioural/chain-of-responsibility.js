@@ -3,10 +3,10 @@
  * PAI presentation
  * ULL 2020-2021
  * @file An example of the Chain of responsibility design pattern
- *     This pattern is composed of a sender class and a series of 
- *     receivers. Each receiver is waiting for the Sender to send 
- *     a request, but only one of them will handle a concrete 
- *     request type. This allows to represent this type of one to 
+ *     This pattern is composed of a sender class and a series of
+ *     receivers. Each receiver is waiting for the Sender to send
+ *     a request, but only one of them will handle a concrete
+ *     request type. This allows to represent this type of one to
  *     many dependencies without tight coupling
  * @since 1/04/2021
  * @author Daniel del Castillo de la Rosa

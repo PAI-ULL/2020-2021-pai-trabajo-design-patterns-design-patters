@@ -1,4 +1,4 @@
-// @ts-check
+/* eslint-disable no-unused-vars */
 /**
  * PAI presentation
  * ULL 2020-2021
@@ -14,8 +14,7 @@
 
 /**
  * Base class
- */
-// @ts-ignore
+// @ts-ignore */
 class Hamburger {
   /** @const {string} @protected */
   description_ = '';
@@ -31,7 +30,7 @@ class Hamburger {
 
   /**
    * Price getter
-   * @return {number} 
+   * @return {number} The price
    */
   getPrice() {
     return this.price_;
@@ -50,19 +49,19 @@ class Hamburger {
    * @return {string}
    */
   getHamburger() {
-    return `You order is: ${this.getDescription()} and the price ${this.getPrice()}`;
+    return `You order is: ${this.getDescription()} ` +
+        `and the price ${this.getPrice()}`;
   }
 }
 
 /**
  * CheeseBurger Class
  */
-// @ts-ignore
 class CheeseBurger extends Hamburger {
   /**
    * Create an object Cheeseburger
    */
-  constructor(){
+  constructor() {
     super();
     /** @const {string} @protected */
     this.description_ = 'Cheeseburger';
@@ -75,7 +74,6 @@ class CheeseBurger extends Hamburger {
 /**
  * BaconDoubleBurger Class
  */
-// @ts-ignore
 class BaconDoubleBurger extends Hamburger {
   /**
    * Create an object BaconDoubleBurger
@@ -92,12 +90,11 @@ class BaconDoubleBurger extends Hamburger {
 /**
  * WesternBurger Class
  */
-// @ts-ignore
 class WesternBurger extends Hamburger {
   /**
    * Create an object WesternBurger
    */
-  constructor(){
+  constructor() {
     super();
     /** @const {string} @protected */
     this.description_ = 'Western Burger';
@@ -116,7 +113,7 @@ class HamburgerDecorator extends Hamburger {
    */
   constructor(burger) {
     super();
-    /**@protected {Hamburger} */
+    /** @protected {Hamburger} */
     this._burger = burger;
   }
 }
@@ -143,7 +140,7 @@ class BaconDecorator extends HamburgerDecorator {
 
   /**
    * Price getter
-   * @return {number} 
+   * @return {number}
    */
   getPrice() {
     return this._burger.getPrice() + 9;
@@ -172,7 +169,7 @@ class HamDecorator extends HamburgerDecorator {
 
   /**
    * Price getter
-   * @return {number} 
+   * @return {number}
    */
   getPrice() {
     return this._burger.getPrice() + 15;
@@ -183,16 +180,16 @@ class HamDecorator extends HamburgerDecorator {
  * Entry point for the program
  */
 const exampleDecorator = function() {
-  let cheeseBurger = new CheeseBurger();
-  let cheeseBurgerWithHam = new HamDecorator(cheeseBurger);
-  let cheeseBurgerWithHamAndBacon = new BaconDecorator(cheeseBurgerWithHam);
+  const cheeseBurger = new CheeseBurger();
+  const cheeseBurgerWithHam = new HamDecorator(cheeseBurger);
+  const cheeseBurgerWithHamAndBacon = new BaconDecorator(cheeseBurgerWithHam);
 
   console.log(cheeseBurger.getHamburger());
-  //output You order is: Cheeseburger and the price 100
+  // output You order is: Cheeseburger and the price 100
   console.log(cheeseBurgerWithHam.getHamburger());
-  //output You order is: Cheeseburger with ham and the price 115
+  // output You order is: Cheeseburger with ham and the price 115
   console.log(cheeseBurgerWithHamAndBacon.getHamburger());
-  //output You order is: Cheeseburger with ham with bacon and the price 124
+  // output You order is: Cheeseburger with ham with bacon and the price 124
 };
 
 exampleDecorator();

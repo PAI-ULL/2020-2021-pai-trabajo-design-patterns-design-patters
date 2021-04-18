@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // @ts-nocheck
 /**
  * PAI presentation
@@ -8,9 +9,9 @@
  * @author Francisco Jesús Mendes Gómez
  */
 
- 'use strict';
+'use strict';
 
- /**
+/**
  * Base class
  */
 class Hamburger {
@@ -21,7 +22,7 @@ class Hamburger {
   /**
    * Add an atribute for each extra ingredient.
    */
-  
+
   /**
    * Create an object hamburger
    */
@@ -32,7 +33,7 @@ class Hamburger {
 
   /**
    * Price getter
-   * @return {number} 
+   * @return {number}
    */
   getPrice() {
     return this.price_;
@@ -51,10 +52,11 @@ class Hamburger {
    * @return {string}
    */
   getHamburger() {
-    return `You order is: ${this.getDescription()} and the price ${this.getPrice()}`;
+    return `You order is: ${this.getDescription()} ` +
+        `and the price ${this.getPrice()}`;
   }
-   /**
-    * Add more methods if you want to add a new functionality for example new 
+  /**
+    * Add more methods if you want to add a new functionality for example new
     * extra ingredient
     */
 }
@@ -66,7 +68,7 @@ class CheeseBurger extends Hamburger {
   /**
    * Create an object Cheeseburger
    */
-  constructor(){
+  constructor() {
     super();
     /** @const {string} @protected */
     this.description_ = 'Cheeseburger';
@@ -77,7 +79,7 @@ class CheeseBurger extends Hamburger {
      */
   }
   /**
-   * Add more methods if you want to add a new functionality for example new 
+   * Add more methods if you want to add a new functionality for example new
    * extra ingredient
    */
 }
@@ -87,7 +89,7 @@ class CheeseBurger extends Hamburger {
  * BaconDoubleBurger Class
  */
 class BaconDoubleBurger extends Hamburger {
- /**
+  /**
   * Create an object BaconDoubleBurger
   */
   constructor() {
@@ -101,7 +103,7 @@ class BaconDoubleBurger extends Hamburger {
      */
   }
   /**
-   * Add more methods if you want to add a new functionality for example new 
+   * Add more methods if you want to add a new functionality for example new
    * extra ingredient
    */
 }
@@ -110,10 +112,10 @@ class BaconDoubleBurger extends Hamburger {
  * WesternBurger Class
  */
 class WesternBurger extends Hamburger {
- /**
+  /**
   * Create an object WesternBurger
   */
-  constructor(){
+  constructor() {
     super();
     /** @const {string} @protected */
     this.description_ = 'Western Burger';
@@ -124,7 +126,7 @@ class WesternBurger extends Hamburger {
      */
   }
   /**
-   * Add more methods if you want to add a new functionality for example new 
+   * Add more methods if you want to add a new functionality for example new
    * extra ingredient
    */
 }
@@ -145,8 +147,7 @@ class WesternBurger extends Hamburger {
      *
   }
   /**
-   * Add more methods if you want to add a new functionality for example new 
+   * Add more methods if you want to add a new functionality for example new
    * extra ingredient
    *
 }*/
- 
